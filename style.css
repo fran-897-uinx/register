@@ -1,0 +1,278 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.8s ease-out;
+}
+
+form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+  animation: slideDown 0.6s ease-out;
+}
+
+.header h2 {
+  color: #4a6baf;
+  margin: 0;
+  font-size: 24px;
+}
+
+.header h4 {
+  color: #6c757d;
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.header p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Input Fields */
+.name, .attribute, .Upload, .course {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #495057;
+  transition: color 0.3s ease;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #4a6baf;
+  box-shadow: 0 0 0 3px rgba(74, 107, 175, 0.2);
+  outline: none;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px dashed #e9ecef;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+input[type="file"]:hover {
+  border-color: #4a6baf;
+  background-color: #f8f9fa;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Radio Buttons */
+.radio {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  border-color: #4a6baf;
+}
+
+input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #4a6baf;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #e9ecef;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #4a6baf;
+  border-color: #4a6baf;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  color: white;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox a {
+  color: #4a6baf;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.checkbox a:hover {
+  color: #3a5a9f;
+  text-decoration: underline;
+}
+
+/* Button */
+.btn {
+  text-align: center;
+}
+
+button[type="submit"] {
+  background-color: #4a6baf;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button[type="submit"]:hover {
+  background-color: #3a5a9f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+/* Horizontal Rules */
+hr {
+  margin: 25px 0;
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(74,107,175,0.1) 0%, rgba(74,107,175,0.8) 50%, rgba(74,107,175,0.1) 100%);
+  animation: hrExpand 0.8s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes hrExpand {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+  
+  .header h2 {
+    font-size: 20px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  select,
+  textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
